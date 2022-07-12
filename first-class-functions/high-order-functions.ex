@@ -17,4 +17,4 @@ defmodule HoFExample do
 end
 
 divide_safe = HoFExample.second_arg_isnt_zero(&HoFExample.divide/2)
-IO.puts(divide_safe.(10, 2))
+divide_safe.(10, 2) |> IO.puts
