@@ -24,3 +24,10 @@ run = fn x, y ->
 end
 
 run.(7, 9)
+
+# pass function as argument to another function - similar to callback
+combine_2_and_3 = fn function -> function.(2, 3) end
+IO.puts(combine_2_and_3.(simple_sum))
+IO.puts(combine_2_and_3.(simple_abs))
+IO.puts(combine_2_and_3.(simple_mul))
+IO.puts(combine_2_and_3.(simple_div))
